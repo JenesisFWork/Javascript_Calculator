@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+<meta name="viewport" content="width=device-width>, initial-scale=1.0"/>
+
+<title>Document</title>
+
+<style>
+
+label {
+
+display: inline-block;
+
+width:150px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<script>
+
+document.bgColor = "sky-blue";
+
+function calculate() {
+
+        // TBD - GET NUMBER 1 AND NUMBER 2 using the document.getElementById function. 
+        // NOTE: make sure to use parseInt to conver the text to an int
+
+        // TBD - GET THE OPERATION TO BE PERFORMED USING document.getElementById function
+
+        // TBD - USE THE SWITCH-CASE TO DETERMINE THE OPERATION AND COMPUTE THE CORRESPONDING RESULT
+
+        // TBD - SET THE RESULT IN THE result ELEMENT USING THE document.getElementById METHOD AND SETTING THE VALUE
+        
+    var number1=parseInt(document.getElementById("number1").value);
+    var number2=parseInt(document.getElementById("number2").value);
+    var result = 0;
+    operation = document.getElementById("operation").value;
+    switch(operation) {
+        case "Addition":
+            result = number1+number2;
+            break;
+        case "Subtraction":
+            result = number1-number2;
+            break;
+        case "Multiplication":
+            result = number1*number2;
+            break;
+        case "Division":
+            result = number1/number2;
+            break;
+    }
+
+    resultElement = document.getElementById("result");
+    resultElement.value = result;
+}
+</script>
+
+<h1>A Simple Calculator</h1>
+
+<form">
+
+<div style="height: 20px; width: 400px;">
+
+<label for="number1" >Enter number 1</label>
+
+<input type="text" name="number1" id="number1" />
+
+</div>
+
+<br />
+
+<div style="height: 20px; width: 400px;">
+
+<label for="number2">Enter number 2</label>
+
+<input type="text" name="number2" id="number2" />
+
+</div>
+
+<br />
+
+<div style="height: 20px; width: 400px;">
+
+<label for="operator">Selection Operation </label>
+
+<select name="operation" id="operation">
+
+<option value="Addition">Addition</option>
+
+<option value="Subtraction">Subtraction</option>
+
+<option value="Multiplication">Multiplication</option>
+
+<option value="Division">Division</option>
+
+</select>
+
+</div>
+
+<br />
+
+<div style="margin: 10px; height: 20px; width: 400px;">
+
+<button type="button" style="height: 40px; width: 200px;" "height onclick="calculate()">Calculate</button>
+
+</div>
+
+<br /><br>
+
+<div>
+
+<label for="result">Result</label>
+
+<input type="text" name="result" id="result" />
+
+</div>
+
+</form>
+
+</body>
